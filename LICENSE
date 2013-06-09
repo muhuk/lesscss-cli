@@ -1,32 +1,3 @@
-lesscss-cli
-===========
-
-Command-line interface for [lesscss-java](https://github.com/marceloverdijk/lesscss-java).
-
-
-Building From Source
---------------------
-
-A jar file with dependencies can be built using the following command:
-
-	mvn package
-
-
-Authors
--------
-
-**Atamert Ölçgen**
-
-+ muhuk@muhuk.com
-
-**Peter Lundberg**
-
-+ peter.lundberg.se@gmail.com
-
-
-Copyright and License
----------------------
-
 Copyright 2013 Atamert Ölçgen
 
 Licensed under the Apache License, Version 2.0 (the "License");
