@@ -1,4 +1,4 @@
-package org.less.cli;
+package com.muhuk.lesscss.cli;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -10,7 +10,8 @@ import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.lesscss.LessException;
-import org.lesscss.cli.Main;
+
+import com.muhuk.lesscss.cli.Main;
 
 public class MainTest {
 	@BeforeClass

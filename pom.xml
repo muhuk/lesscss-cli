@@ -1,9 +1,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>org.lesscss</groupId>
+	<groupId>com.muhuk.lesscss</groupId>
 	<artifactId>lesscss-cli</artifactId>
-	<version>1.0.1-SNAPSHOT</version>
+	<version>1.0.2-SNAPSHOT</version>
 	<name>LESS CLI</name>
 	<description>Command-line interface for lesscss-java</description>
 	<dependencies>
@@ -51,7 +51,7 @@
 					</descriptorRefs>
 					<archive>
 						<manifest>
-							<mainClass>org.lesscss.cli.Main</mainClass>
+							<mainClass>com.muhuk.lesscss.cli.Main</mainClass>
 						</manifest>
 					</archive>
 				</configuration>

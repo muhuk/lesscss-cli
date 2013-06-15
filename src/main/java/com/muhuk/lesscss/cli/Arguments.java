@@ -1,4 +1,4 @@
-package org.lesscss.cli;
+package com.muhuk.lesscss.cli;
 
 import org.kohsuke.args4j.Argument;
 import org.kohsuke.args4j.CmdLineException;

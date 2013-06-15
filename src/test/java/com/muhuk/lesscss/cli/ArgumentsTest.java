@@ -1,9 +1,10 @@
-package org.less.cli;
+package com.muhuk.lesscss.cli;
 
 import org.junit.Assert;
 import org.junit.Test;
 import org.kohsuke.args4j.CmdLineException;
-import org.lesscss.cli.Arguments;
+
+import com.muhuk.lesscss.cli.Arguments;
 
 public class ArgumentsTest {
 	@Test

@@ -1,4 +1,4 @@
-package org.lesscss.cli;
+package com.muhuk.lesscss.cli;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
