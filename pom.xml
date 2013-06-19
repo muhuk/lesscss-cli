@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.muhuk.lesscss</groupId>
 	<artifactId>lesscss-cli</artifactId>
-	<version>1.0.2-SNAPSHOT</version>
+	<version>1.0.3-SNAPSHOT</version>
 	<name>LESS CLI</name>
 	<description>Command-line interface for lesscss-java</description>
 	<dependencies>
@@ -96,4 +96,9 @@
 		<developerConnection>scm:git:git@github.com:muhuk/lesscss-cli.git</developerConnection>
 		<url>http://github.com/muhuk/lesscss-cli</url>
 	</scm>
+	<parent>
+		<groupId>org.sonatype.oss</groupId>
+		<artifactId>oss-parent</artifactId>
+		<version>7</version>
+	</parent>
 </project>
