@@ -9,19 +9,24 @@ import java.io.PrintStream;
 import org.lesscss.LessCompiler;
 import org.lesscss.LessException;
 
-
 public class Main {
 	static LessCompiler lessCompiler = new LessCompiler();
 
-	public static void compile(final String inputFilename, final String outputFilename) throws IOException, LessException {
+	public static void compile(final String inputFilename,
+			final String outputFilename) throws IOException, LessException {
 		File inputFile = new File(inputFilename);
-		if (outputFilename == null) {
-			String output = lessCompiler.compile(inputFile);
-			System.out.print(output);
-		}
-		else {
-			File outputFile = new File(outputFilename);
-			lessCompiler.compile(inputFile, outputFile);
+		PrintStream originalSystemOut = System.out;
+		try {
+			System.setOut(new PrintStream(new ByteArrayOutputStream()));
+			if (outputFilename == null) {
+				String output = lessCompiler.compile(inputFile);
+				originalSystemOut.print(output);
+			} else {
+				File outputFile = new File(outputFilename);
+				lessCompiler.compile(inputFile, outputFile);
+			}
+		} finally {
+			System.setOut(originalSystemOut);
 		}
 	}
 
@@ -31,16 +36,17 @@ public class Main {
 			skipAnnoyingEnvjsOutput();
 			compile(arguments.getInputFilename(), arguments.getOutputFilename());
 		} catch (Exception e) {
-		    System.err.println("======================================");
-		    System.err.println("Problem compiling less:");
+			System.err.println("======================================");
+			System.err.println("Problem compiling less:");
 			System.err.println(e.getMessage());
 			e.printStackTrace();
-		    System.err.println("======================================");
+			System.err.println("======================================");
 			System.exit(1);
 		}
 	}
 
-	public static void skipAnnoyingEnvjsOutput() throws FileNotFoundException, LessException {
+	public static void skipAnnoyingEnvjsOutput() throws FileNotFoundException,
+			LessException {
 		PrintStream originalSystemOut = new PrintStream(System.out);
 		System.setOut(new PrintStream(new ByteArrayOutputStream()));
 		lessCompiler.compile("");
