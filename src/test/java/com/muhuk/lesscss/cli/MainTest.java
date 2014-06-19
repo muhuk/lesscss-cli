@@ -11,8 +11,6 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import org.lesscss.LessException;
 
-import com.muhuk.lesscss.cli.Main;
-
 public class MainTest {
 	@BeforeClass
 	static public void setUp() throws FileNotFoundException, LessException {
@@ -20,7 +18,7 @@ public class MainTest {
 	}
 
 	final String input = "@color: #4D926F; #header { color: @color; }";
-	final String expectedOutput = "#header {\n  color: #4d926f;\n}\n";
+	final String expectedOutput = "#header {\n  color: #4d926f;\n}\n\n";
 
 	@Test
 	public void testCompilationToFile() throws IOException {
@@ -28,7 +26,8 @@ public class MainTest {
 		FileUtils.writeStringToFile(inputFile, input);
 		File outputFile = File.createTempFile("lesscss-cli-", ".css");
 		try {
-			Main.compile(inputFile.getAbsolutePath(), outputFile.getAbsolutePath());
+			Main.compile(inputFile.getAbsolutePath(),
+					outputFile.getAbsolutePath());
 			String output = FileUtils.readFileToString(outputFile);
 			Assert.assertEquals(expectedOutput, output);
 		} catch (Exception e) {
