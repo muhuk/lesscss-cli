@@ -4,7 +4,17 @@ lesscss-cli
 Command-line interface for [lesscss-java](https://github.com/marceloverdijk/lesscss-java).
 
 
-Building From Source
+Installing from Maven
+---------------------
+
+    <dependency>
+    	<groupId>com.muhuk.lesscss</groupId>
+    	<artifactId>lesscss-cli</artifactId>
+    	<version>1.1.0</version>
+    </dependency>
+
+
+Building from Source
 --------------------
 
 A jar file with dependencies can be built using the following command:
