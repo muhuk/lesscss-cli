@@ -19,7 +19,10 @@ public class Arguments {
 		return bean;
 	}
 
+	@Argument(metaVar="inputFilename", index=0, required=true, usage="LESS file to process")
 	private String inputFilename;
+
+	@Argument(metaVar="outputFilename", index=1, required=false, usage="(Optional) CSS output file")
 	private String outputFilename;
 
 	public String getInputFilename() {
@@ -30,12 +33,10 @@ public class Arguments {
 		return outputFilename;
 	}
 
-	@Argument(metaVar="inputFilename", index=0, required=true, usage="LESS file to process")
 	public void setInputFilename(String inputFilename) {
 		this.inputFilename = inputFilename;
 	}
 
-	@Argument(metaVar="outputFilename", index=1, required=false, usage="(Optional) CSS output file")
 	public void setOutputFilename(String outputFilename) {
 		this.outputFilename = outputFilename;
 	}
